@@ -1,2 +1,2 @@
-# infoviz
+# infovis
 ITBA Big Data 
