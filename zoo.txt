@@ -1,1 +1,10 @@
 
+Protovis
+Index Charts
+Stem-and-Leaf Plots
+Q-Q Plots
+quantiles
+Cartograms
+sunburst
+Enclosure diagrams
+node-link diagrams
