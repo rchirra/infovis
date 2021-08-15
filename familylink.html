@@ -14,10 +14,9 @@
   <div id="vis"></div>
     
   <script type="text/javascript">
-	  
 	var vlSpec = {
 	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	  "data": {"url": "data/barley.json"},
+	  "data": {"url": "duration_results.json"},
 	  "mark": "bar",
 	  "encoding": {
 	    "x": {"aggregate": "sum", "field": "yield"},
