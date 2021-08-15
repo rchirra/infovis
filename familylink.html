@@ -16,12 +16,12 @@
   <script type="text/javascript">
 	var vlSpec = {
 	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	  "data": {"url": "duration_results.json"},
+	  "data": {"url": "duration_results.csv"},
 	  "mark": "bar",
 	  "encoding": {
-	    "x": {"aggregate": "sum", "field": "yield"},
-	    "y": {"field": "variety"},
-	    "color": {"field": "site"}
+	    "x": {"field": "duration"},
+	    "y": {"field": "day_only"},
+	    "color": {"field": "header"}
 	  }
 	};
 
