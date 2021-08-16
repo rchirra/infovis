@@ -33,18 +33,23 @@
   </div>
 </div>	
 	
-	<script type="text/javascript">
-		var v1Spec = {
-		  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-		  "data": {"url": "./duration_results.csv"},
-		  "mark": "bar",
-		  "encoding": {
-		    "y": {"aggregate":"sum", "field": "duration", "type": "quantitative" },
-		    "x": {"field": "day_only",  "type": "nominal" },
-		    "color": {"field": "header",  "type": "nominal"}
-		  }
-		};
-		
+ <script type="text/javascript">
+	var vlSpec = {
+	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	  "data": {"url": "./duration_results.csv"},
+	  "mark": "bar",
+	  "encoding": {
+	    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative"},
+	    "x": {"field": "day_only",  "type": "nominal"},
+	    "color": {"field": "header",  "type": "nominal"}
+	  }
+	};
+
+	vegaEmbed('div#vis', vlSpec);
+
+  </script>
+
+ <script type="text/javascript">
 		var v2Spec = {
 		  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 		  "data": {"url": "./time_results.csv"},
@@ -64,7 +69,7 @@
 		  }
 		};		
 
-		vegaEmbed('div#vis1', vlSpec);
+		vegaEmbed('div#vis2', v2Spec);
 
 	</script>
 </body>
