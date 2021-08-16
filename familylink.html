@@ -18,6 +18,10 @@
 	<div class="card-group">
 		<div class="card">
 		</div>
+		<div class="card">
+			<img src="./Cami12.png" class="card-img-top" alt="..." >
+			<div class="card-footer">2017</div>
+		  </div>
 	   <div class="card">
 	    <img src="./Cami3.png" class="card-img-top" alt="..." >
 	    <div class="card-footer">2018</div>
@@ -73,7 +77,10 @@
 	  "encoding": {
 	    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative"},
 	    "x": {"field": "day_only",  "type": "nominal"},
-	    "color": {"field": "header",  "type": "nominal"}
+	    "color": {"field": "header",  "type": "nominal"},
+		"tooltip": [
+			{"field": "header", "title": "App: "}
+    	]		
 	  }
 	};
 
