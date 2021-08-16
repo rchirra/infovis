@@ -15,6 +15,9 @@
 	  <h1 class="text-center text-primary">Camila Family Link</h1>
   </div>
   <div class="row">
+	<div id="vis0"></div>
+  </div>
+  <div class="row">
 	  <h6 class="text-center text-secondary">Horas de uso por dia</h6>
   </div>
   <div class="row">
@@ -39,7 +42,34 @@
   </div>
 </div>	
 	
+
  <script type="text/javascript">
+
+	 var v0pec = {
+	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+		  "data": {
+		    "values": [
+		      {"x": 2015, "y": 0, "img": "cami1.png"},
+		      {"x": 2016, "y": 0, "img": "cami2.png"},
+		      {"x": 2018, "y": 0, "img": "cami3.png"}
+		      {"x": 2019, "y": 0, "img": "cami4.png"}
+		      {"x": 2020, "y": 0, "img": "cami5.png"}
+		    ]
+		  },
+		  "mark": {"type": "image", "width": 50, "height": 50},
+		  "encoding": {
+		    "x": {"field": "x", "type": "quantitative"},
+		    "y": {"field": "y", "type": "quantitative"},
+		    "url": {"field": "img", "type": "nominal"}
+		  }	
+	 };
+
+	vegaEmbed('div#vis0', vlSpec);
+
+  </script>
+	
+<script type="text/javascript">
+	 
 	var vlSpec = {
 	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	  "data": {"url": "./duration_results.csv"},
