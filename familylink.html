@@ -10,23 +10,38 @@
 </head>
 <body>
 
-  <h1>Camila Family Link</h1>
-  <div id="vis"></div>
-    
-  <script type="text/javascript">
-	var vlSpec = {
-	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-	  "data": {"url": "./duration_results.csv"},
-	  "mark": "bar",
-	  "encoding": {
-	    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative"},
-	    "x": {"field": "day_only",  "type": "nominal"},
-	    "color": {"field": "header",  "type": "nominal"}
-	  }
-	};
-	  
-	vegaEmbed('div#vis', vlSpec);
-    
-  </script>
+<div class="container">
+  <div class="row">
+	  <h1 class="text-center text-primary">Camila Family Link</h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>	
+	
+<div id="vis"></div>
+	<script type="text/javascript">
+		var vlSpec = {
+		  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+		  "data": {"url": "./duration_results.csv"},
+		  "mark": "bar",
+		  "encoding": {
+		    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative"},
+		    "x": {"field": "day_only",  "type": "nominal"},
+		    "color": {"field": "header",  "type": "nominal"}
+		  }
+		};
+
+		vegaEmbed('div#vis', vlSpec);
+
+	</script>
 </body>
 </html>
