@@ -96,7 +96,7 @@
 		"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 		"width": "container",
 		"data": {"url": "./time_results.csv"},
-		"mark": "circle",
+		"mark": { "type": "circle", "size": 4 },		
 		"encoding": {
 		    "y": {
 		      "field": "time",
