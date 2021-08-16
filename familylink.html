@@ -15,7 +15,10 @@
 	  <h1 class="text-center text-primary">Camila Family Link</h1>
   </div>
   <div class="row">
-	<div id="vis"></div>
+	<div id="vis1"></div>
+  </div>
+  <div class="row">
+	<div id="vis2"></div>
   </div>
   <div class="row">
     <div class="col">
@@ -31,18 +34,38 @@
 </div>	
 	
 	<script type="text/javascript">
-		var vlSpec = {
+		var v1Spec = {
 		  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 		  "data": {"url": "./duration_results.csv"},
 		  "mark": "bar",
 		  "encoding": {
-		    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative"},
-		    "x": {"field": "day_only",  "type": "nominal"},
+		    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative", "axis": {"title": "Horas de uso"}},
+		    "x": {"field": "day_only",  "type": "nominal", "axis": {"title": "Dia"}},
 		    "color": {"field": "header",  "type": "nominal"}
 		  }
 		};
 
-		vegaEmbed('div#vis', vlSpec);
+		var v2Spec = {
+		  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+		  "data": {"url": "./time_results.csv"},
+		  "mark": "bar",
+		  "encoding": {
+		    "y": {
+		      "field": "time",
+		      "type": "temporal",
+		      "timeUnit": "hours"
+		    },
+		    "x": {
+		      "field": "day_only",
+		      "type": "nominal", 
+		      "timeUnit": "hours"
+		    },
+		    "color": {"field": "header",  "type": "nominal"}
+		  }
+		};
+
+		vegaEmbed('div#vis1', vlSpec);
+		vegaEmbed('div#vis2', v2Spec);
 
 	</script>
 </body>
