@@ -95,8 +95,8 @@
 	var v2Spec = {
 		"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 		"width": "container",
-		"data": {"url": "./time_results.csv"},
-		"mark": { "type": "circle", "size": 4 },		
+		"data": { "url": "./time_results.csv"},
+		"mark": { "type": "circle", "size": 50 },		
 		"encoding": {
 		    "y": {
 		      "field": "time",
@@ -107,7 +107,8 @@
 		      "field": "day_only",
 		      "type": "nominal"
 		    },
-		    "color": {"field": "header",  "type": "nominal"}
+		    "color": {"field": "header",  "type": "nominal"},
+			"tooltip": [ {"field": "header", "title": "App: "} ]		
 		  }
 		};		
 
