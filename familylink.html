@@ -49,16 +49,16 @@
 	  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 		  "data": {
 		    "values": [
-		      {"x": 2015, "y": 0, "img": "cami1.png"},
-		      {"x": 2016, "y": 0, "img": "cami2.png"},
-		      {"x": 2018, "y": 0, "img": "cami3.png"},
-		      {"x": 2019, "y": 0, "img": "cami4.png"},
-		      {"x": 2020, "y": 0, "img": "cami5.png"}
+		      {"x": 2016, "y": 0, "img": "./Cami1.png"},
+		      {"x": 2017, "y": 0, "img": "./Cami2.png"},
+		      {"x": 2018, "y": 0, "img": "./Cami3.png"},
+		      {"x": 2019, "y": 0, "img": "./Cami4.png"},
+		      {"x": 2020, "y": 0, "img": "./Cami5.png"}
 		    ]
 		  },
 		  "mark": {"type": "image", "width": 50, "height": 50},
 		  "encoding": {
-		    "x": {"field": "x", "type": "quantitative"},
+		    "x": {"field": "x", "type": "nominal"},
 		    "y": {"field": "y", "type": "quantitative"},
 		    "url": {"field": "img", "type": "nominal"}
 		  }	
