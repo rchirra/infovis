@@ -39,12 +39,31 @@
 		  "data": {"url": "./duration_results.csv"},
 		  "mark": "bar",
 		  "encoding": {
-		    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative", "axis": {"title": "Horas de uso"}},
-		    "x": {"field": "day_only",  "type": "nominal", "axis": {"title": "Dia"}},
+		    "y": {"aggregate":"sum", "field": "duration", "type": "quantitative" },
+		    "x": {"field": "day_only",  "type": "nominal },
 		    "color": {"field": "header",  "type": "nominal"}
 		  }
 		};
 		
+		var v2Spec = {
+		  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+		  "data": {"url": "./time_results.csv"},
+		  "mark": "bar",
+		  "encoding": {
+		    "y": {
+		      "field": "time",
+		      "type": "temporal",
+		      "timeUnit": "hours"
+		    },
+		    "x": {
+		      "field": "day_only",
+		      "type": "nominal", 
+		      "timeUnit": "hours"
+		    },
+		    "color": {"field": "header",  "type": "nominal"}
+		  }
+		};		
+
 		vegaEmbed('div#vis1', vlSpec);
 
 	</script>
