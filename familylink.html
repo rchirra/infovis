@@ -46,15 +46,6 @@
     </div>
   </div>
 
-  <ul class="nav nav-pills my-4" id="pills-tab" role="tablist">
-	<li class="nav-item" role="presentation">
-	  <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Junio-Julio</button>
-	</li>
-	<li class="nav-item" role="presentation">
-	  <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Julio-Agosto</button>
-	</li>
-  </ul>
-
 
   <div class="row">
 	  <h6 class="text-center text-secondary">Horas de uso por dia</h6>
@@ -78,8 +69,8 @@
 	  "data": {"url": "./duration_results.csv"},
 	  "mark": "bar",
 	  "encoding": {
-	    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative"},
-	    "x": {"field": "day_only",  "type": "nominal"},
+	    "y": {"aggregate":"sum", "field": "duration",  "type": "quantitative", "title": "Duracion"},
+	    "x": {"field": "day_only",  "type": "nominal",  "title": "Fecha"},
 	    "color": {"field": "header",  "type": "nominal"},
 		"tooltip": [
 			{"field": "header", "title": "App: "}
@@ -101,11 +92,13 @@
 		    "y": {
 		      "field": "time",
 		      "type": "temporal",
-		      "timeUnit": "hours"
+		      "timeUnit": "hours",
+			  "title": "Hora de inicio"
 		    },
 		    "x": {
 		      "field": "day_only",
-		      "type": "nominal"
+		      "type": "nominal",
+			  "title": "Fecha"
 		    },
 		    "color": {"field": "header",  "type": "nominal"},
 			"tooltip": [ {"field": "header", "title": "App: "} ]		
