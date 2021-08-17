@@ -115,7 +115,7 @@
 	    "color": {"field": "header",  "type": "nominal"},
 		"tooltip": [
 			{"field": "header", "title": "App: "},
-			{"field": "duration", "type": "quantitative", "title": "Duracion: ", "format": ".2f"}
+			{"field": "duration", "type": "quantitative", "title": "Duracion: ", "format": ".2f", "formatType": "number"}
     	]		
 	  }
 	};
@@ -143,7 +143,10 @@
 			  "title": "Fecha"
 		    },
 		    "color": {"field": "header",  "type": "nominal"},
-			"tooltip": [ {"field": "header", "title": "App: "} ]		
+			"tooltip": [ 
+				{"field": "header", "title": "App: "},
+				{"field": "time", "type": "quantitative", "title": "Duracion: ", "formatType": "time"}
+			]		
 		  }
 		};		
 
